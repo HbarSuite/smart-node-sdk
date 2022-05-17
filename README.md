@@ -253,8 +253,100 @@ it returns an object containing the balances fetched from Hedera:
 }
 ```
 
-### calculatePoolPrice
-to be completed
-
 ### createPool
-to be completed
+it takes two parameters:\
+network => 'mainnet' | 'testnet'\
+pool => an object shaped as follows
+```js
+let pool = {
+  "baseToken": {
+    "id": "string"
+  },
+  "swapToken": {
+    "id": "string"
+  }
+}
+```
+
+You can call the method by running:
+```js
+let response = await createPool('testnet', pool);
+```
+
+it returns an object containing the new pool or an error if the pool already exists:
+```js
+{
+  "pool": {
+    "environment": "string",
+    "created_at": "string",
+    "name": "string",
+    "walletId": "string",
+    "asset": {
+      "pair": {
+        "baseToken": {
+          "id": "string",
+          "symbol": "string",
+          "ratio": 0,
+          "value": 0,
+          "amount": 0
+        },
+        "swapToken": {
+          "id": "string",
+          "symbol": "string",
+          "ratio": 0,
+          "value": 0,
+          "amount": 0
+        }
+      },
+      "value": 0
+    },
+    "type": "string",
+    "is_running": true,
+    "apr": {
+      "percentage": 0,
+      "token": {
+        "id": "string"
+      }
+    }
+  },
+  "decimals": {
+    "baseToken": 0,
+    "swapToken": 0
+  }
+}
+```
+
+### calculatePoolPrice
+it takes four parameters:\
+network => 'mainnet' | 'testnet'\
+amount => the amount you want to swap
+baseToken => the id of the token you want to swap
+swapToken => the id of the token you want to receive
+
+You can call the method by running:
+```js
+let response = await calculatePoolPrice('testnet', amount, baseToken, swapToken);
+```
+
+it will return a pool (or an array of pools in case routing needs to be applied), with all the details:
+```js
+{
+  "name": "string",
+  "ratio": [
+    {
+      "type": "string",
+      "tokenId": "string",
+      "tokenSymbol": "string",
+      "poolPercentage": 0,
+      "poolPrice": 0,
+      "poolAmount": 0
+    }
+  ],
+  "payout": {
+    "amount": 0,
+    "slippage": 0,
+    "tokenId": "string",
+    "tokenSymbol": "string"
+  }
+}
+```
