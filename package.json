@@ -1,0 +1,27 @@
+{
+  "name": "hsuite-js-sdk",
+  "version": "1.0.5",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HbarSuite/smart-node-sdk.git"
+  },
+  "keywords": ["hsuite", "smart-node", "smart-node-sdk", "hsuite-network", "hedera", "dex"],
+  "author": "HSuite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HbarSuite/smart-node-sdk/issues"
+  },
+  "homepage": "https://github.com/HbarSuite/smart-node-sdk#readme",
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
