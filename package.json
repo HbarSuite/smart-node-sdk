@@ -1,6 +1,6 @@
 {
   "name": "hsuite-js-sdk",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/HbarSuite/smart-node-sdk/issues"
   },
-  "homepage": "https://github.com/HbarSuite/smart-node-sdk#readme",
+  "homepage": "https://hsuite.finance",
   "devDependencies": {
     "typescript": "^4.6.4"
   },
