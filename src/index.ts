@@ -2,6 +2,10 @@ import { Network } from './network.type';
 import { SmartNode } from './smart-node';
 let smartNode = new SmartNode();
 
+export const getNetwork = (network: Network) => {
+  return smartNode.getNetwork(network);
+};
+
 export const getNode = (network: Network) => {
   return smartNode.getNode(network);
 };

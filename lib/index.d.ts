@@ -1,4 +1,5 @@
 import { Network } from './network.type';
+export declare const getNetwork: (network: Network) => import("./node.type").Node[];
 export declare const getNode: (network: Network) => import("./node.type").Node;
 export declare const loadLaunchpads: (network: Network) => Promise<any>;
 export declare const loadPools: (network: Network) => Promise<any>;

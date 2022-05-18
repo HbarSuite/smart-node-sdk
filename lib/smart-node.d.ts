@@ -3,6 +3,7 @@ import { Node } from './node.type';
 export declare class SmartNode {
     private nodes;
     constructor();
+    getNetwork(network: Network): Array<Node>;
     getNode(network: Network): Node;
     loadLaunchpads(network: Network): Promise<any>;
     loadPools(network: Network): Promise<any>;

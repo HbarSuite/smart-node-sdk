@@ -34,6 +34,10 @@ export class SmartNode {
 
   constructor() {}
 
+  public getNetwork(network: Network): Array<Node> {
+    return this.nodes[network];
+  }
+
   public getNode(network: Network): Node {
     return this.nodes[network][Math.floor(Math.random() * this.nodes[network].length)];
   }
