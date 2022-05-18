@@ -101,7 +101,7 @@ export class SmartNode {
     return new Promise(async(resolve, reject) => {
       try {
         let node = this.getNode(network);
-        let response = await axios.get(`${node.url}/hedera/accounts/info?accountId=${accountId}`);
+        let response = await axios.get(`${node.url}/holders/info?accountId=${accountId}`);
 
         resolve({
           function: 'getAccountInfos',
@@ -118,7 +118,7 @@ export class SmartNode {
     return new Promise(async(resolve, reject) => {
       try {
         let node = this.getNode(network);
-        let response = await axios.get(`${node.url}/hedera/accounts/balance?accountId=${accountId}`);
+        let response = await axios.get(`${node.url}/holders/balance?accountId=${accountId}`);
 
         resolve({
           function: 'getAccountInfos',
