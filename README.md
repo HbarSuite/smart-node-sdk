@@ -66,6 +66,8 @@ We provided a very basic swagger interface as well, which can be found under /ap
 as first, you shall import the functions you need to use:
 ```js
 import { 
+  getNetwork,
+  getNode,
   loadLaunchpads, 
   loadPools, 
   createPool, 
@@ -92,6 +94,20 @@ try {
 ```
 
 ## methods
+
+### getNetwork
+the only parameter it takes is 'mainnet' | 'testnet':
+```js
+let response = await getNetwork('testnet');
+```
+it returns an array containing all whitelisted nodes for the selected network.
+
+### getNode
+the only parameter it takes is 'mainnet' | 'testnet':
+```js
+let response = await getNode('testnet');
+```
+it returns an random node to work with from the selected network.
 ### loadLaunchpads
 the only parameter it takes is 'mainnet' | 'testnet':
 ```js
