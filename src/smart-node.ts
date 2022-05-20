@@ -35,7 +35,7 @@ export class SmartNode {
   constructor() {}
 
   public getNetwork(network: Network): Array<Node> {
-    return this.nodes[network];
+    return Object.assign({}, this.nodes[network]);
   }
 
   public getNode(network: Network): Node {
