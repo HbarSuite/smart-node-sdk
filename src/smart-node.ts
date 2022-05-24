@@ -6,6 +6,7 @@ export class SmartNode {
   private nodes: {
     testnet: Array<Node>,
     mainnet: Array<Node>,
+    local: Array<Node>,
   } = {
     testnet: [
       {
@@ -27,6 +28,13 @@ export class SmartNode {
         "operator": "0.0.34754833",
         "publicKey": "302a300506032b65700321004b62d79fa8a48cdfec1eadf720414cafd9565496bc4493fa3bbba040e11a3cc2",
         "url": "https://testnet-sn4.hbarsuite.network"
+      }
+    ],
+    local: [
+      {
+        "operator": "local_operator",
+        "publicKey": "local_public_key",
+        "url": "http://localhost:3001"        
       }
     ],
     mainnet: []
