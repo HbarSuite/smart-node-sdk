@@ -11,7 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/HbarSuite/smart-node-sdk.git"
   },
-  "keywords": ["hsuite", "smart-node", "smart-node-sdk", "hsuite-network", "hedera", "dex"],
+  "keywords": [
+    "hsuite",
+    "smart-node",
+    "smart-node-sdk",
+    "hsuite-network",
+    "hedera",
+    "dex"
+  ],
   "author": "HSuite",
   "license": "ISC",
   "bugs": {
