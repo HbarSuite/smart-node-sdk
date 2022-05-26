@@ -3,6 +3,7 @@ export declare const getNetwork: (network: Network) => import("./node.type").Nod
 export declare const getNode: (network: Network) => import("./node.type").Node;
 export declare const loadLaunchpads: (network: Network) => Promise<any>;
 export declare const loadPools: (network: Network) => Promise<any>;
+export declare const loadPositions: (network: Network, tokenId: string, serialNumbers: Array<string>) => Promise<any>;
 export declare const getAccountInfos: (network: Network, accountId: string) => Promise<any>;
 export declare const getAccountBalance: (network: Network, accountId: string) => Promise<any>;
 export declare const loadTokens: (network: Network) => Promise<any>;

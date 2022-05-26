@@ -6,6 +6,7 @@ export declare class SmartNode {
     getNetwork(network: Network): Array<Node>;
     getNode(network: Network): Node;
     loadLaunchpads(network: Network): Promise<any>;
+    loadPositions(network: Network, tokenId: string, serialNumbers: Array<string>): Promise<any>;
     loadPools(network: Network): Promise<any>;
     createPool(network: Network, pool: any): Promise<any>;
     getAccountInfos(network: Network, accountId: string): Promise<any>;

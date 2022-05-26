@@ -71,6 +71,27 @@ export class SmartNode {
     });
   }
 
+  public async loadPositions(network: Network, tokenId: string, serialNumbers: Array<string>): Promise<any> {
+    return new Promise(async(resolve, reject) => {
+      try {
+        let node = this.getNode(network);
+        let response = await axios.get(`${node.url}/pools/positions`, 
+        { params: { 
+          tokenId: tokenId,
+          serialNumbers: serialNumbers
+        } });
+
+        resolve({
+          function: 'loadPositions',
+          node: node,
+          data: response.data
+        });
+      } catch(error) {
+        reject(error);        
+      }
+    });
+  }
+
   public async loadPools(network: Network): Promise<any> {
     return new Promise(async(resolve, reject) => {
       try {
