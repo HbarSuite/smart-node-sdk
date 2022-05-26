@@ -19,7 +19,7 @@ export const loadPools = (network: Network) => {
 }; 
 
 export const loadPositions = (network: Network, tokenId: string, serialNumbers: Array<string>) => {
-  return smartNode.loadPools(network);
+  return smartNode.loadPositions(network, tokenId, serialNumbers);
 }; 
 
 export const getAccountInfos = (network: Network, accountId: string) => {
