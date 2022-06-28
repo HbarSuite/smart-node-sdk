@@ -8,6 +8,28 @@ export class SmartNode {
     mainnet: Array<Node>,
     local: Array<Node>,
   } = {
+    mainnet: [
+      {
+        "operator": "0.0.1027975",
+        "publicKey": "302a300506032b657003210061b21f8a50b8e95a2597517bbd6e230e62328862c117c56a1b3e94e178186e69",
+        "url": "https://mainnet-sn1.hbarsuite.network"
+      },
+      {
+        "operator": "0.0.1027976",
+        "publicKey": "302a300506032b6570032100669c63617353f5181af0455e79c22688a0c7f69db169f7958c03bcab0dab8d97",
+        "url": "https://mainnet-sn2.hbarsuite.network"
+      },
+      {
+        "operator": "0.0.1027978",
+        "publicKey": "302a300506032b65700321004a83f50907014c41b6e297a67fe4351c232822d6660e5470f0da912362d46164",
+        "url": "https://mainnet-sn3.hbarsuite.network"
+      },
+      {
+        "operator": "0.0.1027979",
+        "publicKey": "302a300506032b6570032100efc5eed0ba886f711c261ffd816aef05d70bc5c894037fc3ae0b354e26a243f6",
+        "url": "https://mainnet-sn4.hbarsuite.network"
+      }
+    ],    
     testnet: [
       {
         "operator": "0.0.34754823",
@@ -51,8 +73,7 @@ export class SmartNode {
         "publicKey": "302a300506032b65700321004b62d79fa8a48cdfec1eadf720414cafd9565496bc4493fa3bbba040e11a3cc2",
         "url": "http://localhost:3004"
       }
-    ],
-    mainnet: []
+    ]
   };
 
   constructor() {}
