@@ -111,6 +111,23 @@ export class SmartNode {
     });
   }
 
+  public async reserveNft(network: Network, walletId: string, tokenId: string): Promise<any> {
+    return new Promise(async(resolve, reject) => {
+      try {
+        let node = this.getNode(network);
+        let response = await axios.get(`${node.url}/launchpad/reserve_nft?tokenId=${tokenId}&walletId=${walletId}`);
+
+        resolve({
+          function: 'reserveNft',
+          node: node,
+          data: response.data
+        });
+      } catch(error) {
+        reject(error);        
+      }
+    });
+  }
+
   public async loadPositions(network: Network, tokenId: string, serialNumbers: Array<string>): Promise<any> {
     return new Promise(async(resolve, reject) => {
       try {
