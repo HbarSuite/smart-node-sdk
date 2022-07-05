@@ -93,7 +93,11 @@ export class SmartNode {
         let response = await axios.get(`${node.url}/tokens/launchpad`);
 
         response.data.forEach((data: any) => {
-          data.image = `${node.url}/${data.image}`
+          data.image = `${node.url}/${data.image}`;
+
+          data.launchpad.forEach((round: any) => {
+            round.header = `${node.url}/${round.header}`;
+          });
         });
 
         resolve({
