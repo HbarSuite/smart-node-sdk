@@ -20,11 +20,7 @@ export const loadPools = (network: Network) => {
 
 export const loadPositions = (network: Network, tokenId: string, serialNumbers: Array<string>) => {
   return smartNode.loadPositions(network, tokenId, serialNumbers);
-}; 
-
-export const reserveNft = (network: Network, walletId: string, tokenId: string) => {
-  return smartNode.reserveNft(network, walletId, tokenId);
-}; 
+};
 
 export const getAccountInfos = (network: Network, accountId: string) => {
   return smartNode.getAccountInfos(network, accountId);

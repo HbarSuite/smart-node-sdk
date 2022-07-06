@@ -6,7 +6,6 @@ export declare class SmartNode {
     getNetwork(network: Network): Array<Node>;
     getNode(network: Network): Node;
     loadLaunchpads(network: Network): Promise<any>;
-    reserveNft(network: Network, walletId: string, tokenId: string): Promise<any>;
     loadPositions(network: Network, tokenId: string, serialNumbers: Array<string>): Promise<any>;
     loadPools(network: Network): Promise<any>;
     createPool(network: Network, pool: any): Promise<any>;
